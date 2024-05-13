@@ -1,0 +1,160 @@
+body {
+  background-image: url(./img/Chalkboard.jpg);
+  font-family: "Barlow", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 120px auto;
+  width: 600px;
+}
+
+header {
+  margin-bottom: 30px;
+}
+
+h1 {
+  font-family: "Fredericka the Great", serif;
+  font-size: 36px;
+  line-height: 1.5;
+  color: #fff;
+  text-align: center;
+}
+
+h3 {
+  font-family: "Barlow", sans-serif;
+  font-size: 18px;
+  line-height: 1.5;
+  color: #ffa3a3;
+}
+
+.form-container {
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.21);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.hint {
+  line-height: 1.5;
+  margin: 5px;
+  opacity: 0.7;
+  font-size: 14px;
+  padding-left: 20px;
+  margin-bottom: 30px;
+  color: #fff;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-area input, .restrictions select, .dish select {
+    width: 100%; 
+    padding: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; 
+}
+
+
+.select-diet,
+.type-of-dish {
+  padding: 16px;
+  border: 1px solid rgb(65, 65, 75);
+  font-family: "Barlow", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 20px;
+  border-radius: 5px;
+  color: rgb(65, 65, 75);
+  width:100%;
+  margin-bottom: 50px;
+}
+
+.instructions {
+  padding: 16px;
+  border: 1px solid rgb(65, 65, 75);
+  width: 100%;
+  font-family: "Barlow", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 20px;
+  border-radius: 5px;
+  color: rgb(65, 65, 75);
+}
+
+.instructions::after {
+  border: 1px solid rgb(65, 65, 75);
+}
+
+.submit-button {
+  margin-top: 20px;
+  background-color: #f87575;
+  border: none;
+  font-size: 16px;
+  color: #ffff;
+  border-radius: 50px;
+  padding: 18px 24px;
+  width: 200px;
+}
+
+.food {
+  background: rgba(255, 255, 255, 0.21);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color:#fff;
+  padding:20px;
+ font-size: 16px;
+  line-height: 1.25;
+  margin-top: 50px;
+}
+
+.food strong {
+  color: #ffa3a3;
+  font-weight: 800;
+  line-height: 3;
+}
+
+.hidden {
+  display: none;
+}
+
+footer {
+  text-align: center;
+  font-size: 13px;
+  margin-top: 30px;
+  color:#fff
+}
+
+a{
+    color:#ffa3a3;
+}
+
+.generating {
+  animation: blink 1s step-start 0s infinite;
+}
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
