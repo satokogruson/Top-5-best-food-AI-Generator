@@ -19,7 +19,7 @@ function generateFood(event) {
     console.log("Type of Dish:", typeSelection.value);
 
 
-    let context = "Context: The user is seeking a top 5 list of culinary recommendations based on specific dietary needs and type of dish.The dishes should be popular within the specified country or city and suitable for the given dietary restriction. You mission is to generate a list of 5 foods with a title using <h3> bold. Each item will be numbered with a short description in basic HTML and separated by a <br />. Sign the list with 'SheCodes AI' in bold inside a <strong> element at the end of the list and NOT at the beginning";
+    let context = "Context: The user is seeking a top 5 list of culinary recommendations based on specific dietary needs and type of dish.The dishes should be popular within the specified country or city and suitable for the given dietary restriction. You mission is to generate a list of 5 foods with a title of the output using <h3> bold. Each item will have a description in basic HTML and separated by a <br/>. Sign the list with 'SheCodes AI' in bold inside a <strong> element at the end of the list and NOT at the beginning";
     let prompt = `User instructions: List up the top five popular dishes in ${instructionsInput.value} that comply with ${restrictionSelection.value} dietary preferences within the dish type of ${typeSelection.value}`; 
 
     let apiURL = `https://api.shecodes.io/ai/v1/generate?prompt=${prompt}&context=${context}&key=${apiKey}`;
