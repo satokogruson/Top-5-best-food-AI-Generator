@@ -1,6 +1,6 @@
 body {
-  background-image: url(./img/Chalkboard.jpg);
-  font-family: "Barlow", sans-serif;
+background: radial-gradient(circle at 24.1% 68.8%, rgb(50, 50, 50) 0%, rgb(0, 0, 0) 99.4%);
+  font-family: "Sriracha", cursive;
   font-weight: 400;
   font-style: normal;
 }
@@ -14,32 +14,48 @@ body {
 }
 
 header {
-  margin-bottom: 30px;
+  margin-bottom: 20px;
+}
+
+.header-container {
+  display: flex;
+  flex-direction: row;
+ line-height: 0.5;
+ margin-bottom:20px;
+}
+.logo {
+  width:20%;
+  height:20%;
 }
 
 h1 {
-  font-family: "Fredericka the Great", serif;
-  font-size: 36px;
-  line-height: 1.5;
+  font-size: 60px;
   color: #fff;
   text-align: center;
 }
 
 h3 {
-  font-family: "Barlow", sans-serif;
   font-size: 18px;
   line-height: 1.5;
-  color: #ffa3a3;
+  color: #ffffff;
+}
+
+.sub-container {
+  padding: 0 0 0 20px;
+}
+
+.description {
+  margin-bottom: 30px;
 }
 
 .form-container {
   padding: 30px;
-  background: rgba(255, 255, 255, 0.21);
+  background: rgba(113, 113, 113, 0.21);
   border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  border: 1px solid rgba(154, 154, 154, 0.3);
 }
 
 .hint {
@@ -70,7 +86,6 @@ form {
 .type-of-dish {
   padding: 16px;
   border: 1px solid rgb(65, 65, 75);
-  font-family: "Barlow", sans-serif;
   font-weight: 400;
   font-style: normal;
   font-size: 16px;
@@ -85,7 +100,6 @@ form {
   padding: 16px;
   border: 1px solid rgb(65, 65, 75);
   width: 100%;
-  font-family: "Barlow", sans-serif;
   font-weight: 400;
   font-style: normal;
   font-size: 16px;
@@ -100,22 +114,22 @@ form {
 
 .submit-button {
   margin-top: 20px;
-  background-color: #f87575;
+  background-color: #b42256;
   border: none;
   font-size: 16px;
-  color: #ffff;
+  color: #fefefe;
   border-radius: 50px;
   padding: 18px 24px;
   width: 200px;
 }
 
 .food {
-  background: rgba(255, 255, 255, 0.21);
+  background: rgba(113, 113, 113, 0.21);
   border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  border: 1px solid rgba(154, 154, 154, 0.3);
   color:#fff;
   padding:20px;
  font-size: 16px;
@@ -124,7 +138,7 @@ form {
 }
 
 .food strong {
-  color: #ffa3a3;
+  color: #f0acc4;
   font-weight: 800;
   line-height: 3;
 }
@@ -135,13 +149,13 @@ form {
 
 footer {
   text-align: center;
-  font-size: 13px;
-  margin-top: 30px;
-  color:#fff
+  font-size: 14px;
+  margin-top: 50px;
+  color:#ffffff
 }
 
 a{
-    color:#ffa3a3;
+    color:#f0acc4;
 }
 
 .generating {
