@@ -37,7 +37,7 @@ h1 {
 h3 {
   font-size: 18px;
   line-height: 1.5;
-  color: #ffffff;
+    color: #f0acc4;
 }
 
 .sub-container {
@@ -46,6 +46,7 @@ h3 {
 
 .description {
   margin-bottom: 30px;
+    color: #ffffff;
 }
 
 .form-container {
