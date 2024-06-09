@@ -37,7 +37,7 @@ h1 {
 h3 {
   font-size: 18px;
   line-height: 1.5;
-    color: #f0acc4;
+    color: #f5c0c6;
 }
 
 .sub-container {
@@ -115,7 +115,7 @@ form {
 
 .submit-button {
   margin-top: 20px;
-  background-color: #b42256;
+  background-color: #d73147;
   border: none;
   font-size: 16px;
   color: #fefefe;
@@ -140,7 +140,7 @@ form {
 }
 
 .food strong {
-  color: #f0acc4;
+  color: #f5c0c6;
   font-weight: 800;
   line-height: 3;
 }
@@ -157,7 +157,7 @@ footer {
 }
 
 a{
-    color:#f0acc4;
+    color:#f5c0c6;
 }
 
 .generating {
