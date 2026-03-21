@@ -35,8 +35,10 @@ body::before {
   flex-direction: column;
   justify-content: center;
   margin: 60px auto;
-  width: 620px;
-  padding: 0 16px;
+  width: 100%;
+  max-width: 640px;
+  padding: 0 24px;
+  box-sizing: border-box;
 }
 
 header {
@@ -284,4 +286,100 @@ a:hover {
 @keyframes blink {
   0%, 100% { opacity: 1; }
   50% { opacity: 0.3; }
+}
+
+/* Tablet */
+@media (max-width: 680px) {
+  .container {
+    margin: 40px auto;
+    padding: 0 20px;
+  }
+
+  h1 {
+    font-size: 48px;
+  }
+
+  .logo {
+    width: 56px;
+    height: 56px;
+  }
+
+  .form-container {
+    padding: 24px 24px;
+  }
+
+  .food {
+    padding: 20px 24px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .container {
+    margin: 24px auto;
+    padding: 0 16px;
+  }
+
+  .header-container {
+    gap: 10px;
+  }
+
+  .logo {
+    width: 44px;
+    height: 44px;
+  }
+
+  h1 {
+    font-size: 38px;
+    letter-spacing: 0;
+  }
+
+  h3, .description {
+    font-size: 17px;
+  }
+
+  .form-container {
+    padding: 20px 16px;
+  }
+
+  .input-area input,
+  .restrictions select,
+  .dish select,
+  .select-diet,
+  .type-of-dish,
+  .instructions {
+    font-size: 18px;
+    padding: 10px 12px;
+  }
+
+  .select-diet,
+  .type-of-dish {
+    margin-bottom: 12px;
+  }
+
+  .hint {
+    font-size: 14px;
+    margin-bottom: 16px;
+  }
+
+  .submit-button {
+    width: 100%;
+    font-size: 22px;
+    padding: 14px 24px;
+    box-sizing: border-box;
+  }
+
+  .food {
+    padding: 16px;
+    font-size: 18px;
+  }
+
+  .food h3 {
+    font-size: 21px;
+  }
+
+  footer {
+    font-size: 14px;
+    margin-top: 24px;
+  }
 }
