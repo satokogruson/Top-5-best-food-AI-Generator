@@ -1,24 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&display=swap');
+
 body {
-  background:
-    linear-gradient(135deg, rgba(10, 8, 20, 0.60) 0%, rgba(18, 14, 35, 0.55) 50%, rgba(8, 10, 18, 0.65) 100%),
-    url("/src/img/gourmet_BG.jpeg") center center / cover no-repeat fixed;
   min-height: 100vh;
-  font-family: "Inter", sans-serif;
+  font-family: "Caveat", cursive;
   font-weight: 400;
-  font-style: normal;
-  color: #e2e8f0;
+  color: #f0ece0;
+  background-color: #2a3b2a;
+  background-image:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='400' height='400' filter='url(%23noise)' opacity='0.08'/%3E%3C/svg%3E"),
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 3px,
+      rgba(255,255,255,0.012) 3px,
+      rgba(255,255,255,0.012) 4px
+    );
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background:
+    radial-gradient(ellipse at 20% 30%, rgba(255,255,255,0.03) 0%, transparent 60%),
+    radial-gradient(ellipse at 80% 70%, rgba(255,255,255,0.025) 0%, transparent 55%);
+  pointer-events: none;
+  z-index: 0;
 }
 
 .container {
+  position: relative;
+  z-index: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin: 80px auto;
-  width: 600px;
+  margin: 60px auto;
+  width: 620px;
+  padding: 0 16px;
 }
 
 header {
-  margin-bottom: 16px;
+  margin-bottom: 12px;
 }
 
 .header-container {
@@ -26,61 +48,74 @@ header {
   flex-direction: row;
   align-items: center;
   gap: 16px;
-  margin-bottom: 20px;
+  margin-bottom: 16px;
 }
 
 .logo {
   width: 72px;
   height: 72px;
   object-fit: contain;
-  filter: drop-shadow(0 0 12px rgba(139, 92, 246, 0.5));
+  filter: brightness(0) invert(1) drop-shadow(0 2px 6px rgba(255,255,255,0.2));
 }
 
 h1 {
-  font-family: "Playfair Display", serif;
-  font-size: 52px;
+  font-family: "Caveat", cursive;
+  font-size: 64px;
   font-weight: 700;
-  color: #fff;
-  letter-spacing: -0.5px;
-  line-height: 1.1;
-  background: linear-gradient(90deg, #ffffff 0%, #c4b5fd 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: #f5f0e8;
+  letter-spacing: 1px;
+  line-height: 1;
+  text-shadow:
+    2px 2px 0px rgba(0,0,0,0.3),
+    0 0 20px rgba(240,236,224,0.15);
 }
 
 h3 {
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 1.6;
-  color: #94a3b8;
+  font-family: "Caveat", cursive;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.5;
+  color: #c8e6c9;
 }
 
 .sub-container {
-  padding: 0 0 0 4px;
+  padding: 0 4px;
 }
 
 .description {
-  margin-bottom: 32px;
-  color: #94a3b8;
+  margin-bottom: 28px;
+  color: #c8e6c9;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.3);
 }
 
 .form-container {
-  padding: 32px;
-  background: rgba(255, 255, 255, 0.04);
-  border-radius: 20px;
-  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.4), 0 1px 0 rgba(255,255,255,0.06) inset;
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 32px 36px;
+  background: rgba(0, 0, 0, 0.18);
+  border-radius: 4px;
+  border: 2px dashed rgba(255, 255, 255, 0.25);
+  box-shadow:
+    0 0 0 6px rgba(0,0,0,0.12),
+    0 8px 32px rgba(0,0,0,0.35),
+    inset 0 1px 0 rgba(255,255,255,0.06);
+  position: relative;
+}
+
+.form-container::before {
+  content: "";
+  position: absolute;
+  inset: 3px;
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 2px;
+  pointer-events: none;
 }
 
 .hint {
   line-height: 1.5;
-  margin: 6px 0 28px 2px;
-  opacity: 0.5;
-  font-size: 13px;
-  color: #cbd5e1;
+  margin: 4px 0 24px 2px;
+  opacity: 0.55;
+  font-size: 16px;
+  color: #e0d8c8;
+  font-family: "Caveat", cursive;
 }
 
 form {
@@ -92,128 +127,130 @@ form {
 .restrictions select,
 .dish select {
   width: 100%;
-  padding: 14px 16px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 10px;
+  padding: 12px 16px;
+  border: none;
+  border-bottom: 2px solid rgba(255,255,255,0.35);
+  border-radius: 0;
   box-sizing: border-box;
-  background: rgba(255, 255, 255, 0.06);
-  color: #e2e8f0;
-  font-family: "Inter", sans-serif;
-  font-size: 15px;
-  transition: border-color 0.2s, box-shadow 0.2s;
+  background: transparent;
+  color: #f5f0e8;
+  font-family: "Caveat", cursive;
+  font-size: 20px;
+  font-weight: 500;
+  transition: border-color 0.2s;
   outline: none;
 }
 
 .input-area input:focus,
 .restrictions select:focus,
 .dish select:focus {
-  border-color: rgba(139, 92, 246, 0.6);
-  box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.15);
+  border-bottom-color: #a5d6a7;
 }
 
 .input-area input::placeholder {
-  color: #64748b;
+  color: rgba(240,236,224,0.35);
+  font-family: "Caveat", cursive;
 }
 
 .select-diet,
 .type-of-dish {
-  padding: 14px 16px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  font-family: "Inter", sans-serif;
-  font-weight: 400;
-  font-size: 15px;
-  line-height: 20px;
-  border-radius: 10px;
-  color: #e2e8f0;
+  padding: 12px 16px;
+  border: none;
+  border-bottom: 2px solid rgba(255,255,255,0.35);
+  font-family: "Caveat", cursive;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  border-radius: 0;
+  color: #f5f0e8;
   width: 100%;
   margin-bottom: 20px;
-  background: rgba(255, 255, 255, 0.06);
+  background: transparent;
   cursor: pointer;
   appearance: none;
   -webkit-appearance: none;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%2394a3b8' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23c8e6c9' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
-  background-position: right 16px center;
-  padding-right: 40px;
-  transition: border-color 0.2s, box-shadow 0.2s;
+  background-position: right 8px center;
+  padding-right: 32px;
+  transition: border-color 0.2s;
   outline: none;
 }
 
 .select-diet option,
 .type-of-dish option {
-  background: #1e1e2e;
-  color: #e2e8f0;
+  background: #2a3b2a;
+  color: #f5f0e8;
 }
 
 .instructions {
-  padding: 14px 16px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 12px 16px;
+  border: none;
+  border-bottom: 2px solid rgba(255,255,255,0.35);
   width: 100%;
-  font-family: "Inter", sans-serif;
-  font-weight: 400;
-  font-size: 15px;
-  line-height: 20px;
-  border-radius: 10px;
-  color: #e2e8f0;
-  background: rgba(255, 255, 255, 0.06);
-  transition: border-color 0.2s, box-shadow 0.2s;
-  outline: none;
-}
-
-.instructions::after {
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  font-family: "Caveat", cursive;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  border-radius: 0;
+  color: #f5f0e8;
+  background: transparent;
 }
 
 .submit-button {
-  margin-top: 12px;
-  background: linear-gradient(135deg, #8b5cf6 0%, #6d28d9 100%);
-  border: none;
-  font-family: "Inter", sans-serif;
-  font-size: 15px;
-  font-weight: 600;
-  color: #fff;
-  border-radius: 50px;
-  padding: 16px 32px;
-  width: 200px;
+  margin-top: 20px;
+  background: transparent;
+  border: 2px solid rgba(240, 236, 224, 0.7);
+  font-family: "Caveat", cursive;
+  font-size: 22px;
+  font-weight: 700;
+  color: #f5f0e8;
+  border-radius: 4px;
+  padding: 12px 28px;
+  width: 180px;
   cursor: pointer;
-  letter-spacing: 0.3px;
-  box-shadow: 0 4px 20px rgba(109, 40, 217, 0.4);
-  transition: transform 0.15s, box-shadow 0.15s;
+  letter-spacing: 1px;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.3);
+  box-shadow: 2px 2px 0 rgba(0,0,0,0.25);
+  transition: background 0.15s, color 0.15s, box-shadow 0.15s;
 }
 
 .submit-button:hover {
-  transform: translateY(-1px);
-  box-shadow: 0 6px 28px rgba(109, 40, 217, 0.55);
+  background: rgba(165, 214, 167, 0.18);
+  border-color: #a5d6a7;
+  color: #a5d6a7;
+  box-shadow: 3px 3px 0 rgba(0,0,0,0.3);
 }
 
 .submit-button:active {
-  transform: translateY(0);
+  box-shadow: 1px 1px 0 rgba(0,0,0,0.25);
+  transform: translate(1px, 1px);
 }
 
 .food {
-  background: rgba(255, 255, 255, 0.04);
-  border-radius: 20px;
-  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.4);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  color: #cbd5e1;
-  padding: 28px 32px;
-  font-size: 15px;
+  background: rgba(0, 0, 0, 0.18);
+  border-radius: 4px;
+  border: 2px dashed rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.05);
+  color: #f0ece0;
+  padding: 28px 36px;
+  font-family: "Caveat", cursive;
+  font-size: 20px;
   line-height: 1.7;
-  margin-top: 28px;
+  margin-top: 24px;
+  position: relative;
 }
 
 .food h3 {
-  color: #e2e8f0;
-  font-weight: 600;
-  font-size: 17px;
-  margin-bottom: 4px;
+  color: #f5f0e8;
+  font-weight: 700;
+  font-size: 24px;
+  margin-bottom: 2px;
 }
 
 .food strong {
-  color: #a78bfa;
-  font-weight: 600;
+  color: #a5d6a7;
+  font-weight: 700;
   line-height: 3;
 }
 
@@ -223,27 +260,28 @@ form {
 
 footer {
   text-align: center;
-  font-size: 13px;
-  margin-top: 40px;
-  color: #475569;
+  font-family: "Caveat", cursive;
+  font-size: 16px;
+  margin-top: 36px;
+  color: rgba(240,236,224,0.4);
 }
 
 a {
-  color: #a78bfa;
+  color: #a5d6a7;
   text-decoration: none;
 }
 
 a:hover {
-  color: #c4b5fd;
+  color: #c8e6c9;
 }
 
 .generating {
-  color: #94a3b8;
-  font-size: 14px;
+  color: #c8e6c9;
+  font-size: 20px;
   animation: blink 1.4s ease-in-out infinite;
 }
 
 @keyframes blink {
   0%, 100% { opacity: 1; }
-  50% { opacity: 0.35; }
+  50% { opacity: 0.3; }
 }
