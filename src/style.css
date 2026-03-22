@@ -73,10 +73,10 @@ h1 {
 }
 
 h3 {
-  font-family: "Caveat", cursive;
-  font-size: 20px;
+  font-family: "Nunito", sans-serif;
+  font-size: 19px;
   font-weight: 500;
-  line-height: 1.5;
+  line-height: 1.6;
   color: #c8e6c9;
 }
 
@@ -115,9 +115,9 @@ h3 {
   line-height: 1.5;
   margin: 4px 0 24px 2px;
   opacity: 0.55;
-  font-size: 16px;
+  font-size: 14px;
   color: #e0d8c8;
-  font-family: "Caveat", cursive;
+  font-family: "Nunito", sans-serif;
 }
 
 form {
@@ -136,8 +136,8 @@ form {
   box-sizing: border-box;
   background: transparent;
   color: #f5f0e8;
-  font-family: "Caveat", cursive;
-  font-size: 20px;
+  font-family: "Nunito", sans-serif;
+  font-size: 16px;
   font-weight: 500;
   transition: border-color 0.2s;
   outline: none;
@@ -150,8 +150,8 @@ form {
 }
 
 .input-area input::placeholder {
-  color: rgba(240,236,224,0.65);
-  font-family: "Caveat", cursive;
+  color: rgba(240,236,224,0.55);
+  font-family: "Nunito", sans-serif;
 }
 
 .select-diet,
@@ -159,9 +159,9 @@ form {
   padding: 12px 16px;
   border: none;
   border-bottom: 2px solid rgba(255,255,255,0.35);
-  font-family: "Caveat", cursive;
+  font-family: "Nunito", sans-serif;
   font-weight: 500;
-  font-size: 20px;
+  font-size: 16px;
   line-height: 24px;
   border-radius: 0;
   color: #f5f0e8;
@@ -190,9 +190,9 @@ form {
   border: none;
   border-bottom: 2px solid rgba(255,255,255,0.35);
   width: 100%;
-  font-family: "Caveat", cursive;
+  font-family: "Nunito", sans-serif;
   font-weight: 500;
-  font-size: 20px;
+  font-size: 16px;
   line-height: 24px;
   border-radius: 0;
   color: #f5f0e8;
@@ -203,8 +203,8 @@ form {
   margin-top: 24px;
   background: linear-gradient(160deg, #e8a838 0%, #d4891f 100%);
   border: none;
-  font-family: "Caveat", cursive;
-  font-size: 24px;
+  font-family: "Nunito", sans-serif;
+  font-size: 18px;
   font-weight: 700;
   color: #1a2b1a;
   border-radius: 6px;
@@ -235,8 +235,8 @@ form {
   box-shadow: 0 8px 32px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.05);
   color: #f0ece0;
   padding: 28px 36px;
-  font-family: "Caveat", cursive;
-  font-size: 20px;
+  font-family: "Nunito", sans-serif;
+  font-size: 16px;
   line-height: 1.7;
   margin-top: 24px;
   position: relative;
@@ -245,7 +245,7 @@ form {
 .food h3 {
   color: #f5f0e8;
   font-weight: 700;
-  font-size: 24px;
+  font-size: 20px;
   margin-bottom: 2px;
 }
 
@@ -261,8 +261,8 @@ form {
 
 footer {
   text-align: center;
-  font-family: "Caveat", cursive;
-  font-size: 16px;
+  font-family: "Nunito", sans-serif;
+  font-size: 14px;
   margin-top: 36px;
   color: rgba(240,236,224,0.4);
 }
